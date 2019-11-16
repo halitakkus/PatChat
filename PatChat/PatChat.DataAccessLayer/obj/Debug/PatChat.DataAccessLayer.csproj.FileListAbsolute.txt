@@ -1,0 +1,13 @@
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\PatChat.DataAccessLayer.dll
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\PatChat.DataAccessLayer.pdb
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\obj\Debug\PatChat.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\obj\Debug\PatChat.DataAccessLayer.dll
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\obj\Debug\PatChat.DataAccessLayer.pdb
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\PatChat.DataAccessLayer.dll.config
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\PatChat.Entities.dll
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\PatChat.Entities.pdb
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Halit\Desktop\PatChat\PatChat.DataAccessLayer\obj\Debug\PatChat.DataAccessLayer.csproj.CopyComplete
