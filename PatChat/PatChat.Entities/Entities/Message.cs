@@ -6,11 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PatChat.Entities.Entities
-{
+{ 
    public class Message
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
         public Group Group { get; set; }
         public User User { get; set; }
         public string Content { get; set; }

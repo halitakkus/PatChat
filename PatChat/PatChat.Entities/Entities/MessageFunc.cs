@@ -10,7 +10,7 @@ namespace PatChat.Entities.Entities
    public class MessageFunc
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
         public Message Message { get; set; }
         public User User { get; set; }
         public bool Func { get; set; }

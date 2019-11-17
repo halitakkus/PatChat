@@ -11,3 +11,16 @@ C:\Users\Halit\Desktop\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessL
 C:\Users\Halit\Desktop\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessLayer.csproj.CopyComplete
 C:\Users\Halit\Desktop\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessLayer.dll
 C:\Users\Halit\Desktop\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessLayer.pdb
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\PatChat.BusinessLayer.dll
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\PatChat.BusinessLayer.pdb
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\PatChat.DataAccessLayer.dll
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\PatChat.Entities.dll
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\PatChat.DataAccessLayer.pdb
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\PatChat.DataAccessLayer.dll.config
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\PatChat.Entities.pdb
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\bin\Debug\EntityFramework.xml
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessLayer.csprojAssemblyReference.cache
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessLayer.csproj.CopyComplete
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessLayer.dll
+C:\GIT\PatChat\PatChat\PatChat.BusinessLayer\obj\Debug\PatChat.BusinessLayer.pdb

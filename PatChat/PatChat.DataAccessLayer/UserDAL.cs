@@ -11,9 +11,38 @@ namespace PatChat.DataAccessLayer
     {
       public bool AddUser(User user)
         {
+            
             Context.Users.Add(user);
             return Context.SaveChanges() > 0;
         }
+        public bool IsExists(string username,string password)
+        {
+            return Context.Users.Any(i => i.UserName == username && i.Password == password);
+        }
+        public User IsExistsAndFind(string username, string password)
+        {
+            return Context.Users.Where(i => i.UserName == username && i.Password == password).FirstOrDefault();
+        }
+        public bool AddMessage(User user, string message,Group group )
+        {
+            string Id = Partner.CreateId();
+            if (Context.Messages.Any(i => i.Id == Id) == false)
+            {
+             /*Context.Users.Find(user.Id).addMessage.Add(new Message()
+                {
+                    Content = message,
+                    Group = group,
+                    IsDeleted = false,
+                    Id = Id
+                });*/
+            }
+            else
+                AddMessage(user,message,group);
+
+          
+            return Context.SaveChanges() > 0;
+        }
+
         public User GetUserById(string Id)
         {
             return Context.Users.Find(Id);

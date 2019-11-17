@@ -10,7 +10,7 @@ namespace PatChat.Entities.Entities
   public  class AddGroup
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; }
         public Group GroupId { get; set; }
         public User UserId { get; set; }
     }

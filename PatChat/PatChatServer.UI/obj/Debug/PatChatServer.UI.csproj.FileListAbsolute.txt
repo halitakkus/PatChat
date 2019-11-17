@@ -1,0 +1,6 @@
+C:\GIT\PatChat\PatChat\PatChatServer.UI\bin\Debug\PatChatServer.UI.exe.config
+C:\GIT\PatChat\PatChat\PatChatServer.UI\bin\Debug\PatChatServer.UI.exe
+C:\GIT\PatChat\PatChat\PatChatServer.UI\bin\Debug\PatChatServer.UI.pdb
+C:\GIT\PatChat\PatChat\PatChatServer.UI\obj\Debug\PatChatServer.UI.csprojAssemblyReference.cache
+C:\GIT\PatChat\PatChat\PatChatServer.UI\obj\Debug\PatChatServer.UI.exe
+C:\GIT\PatChat\PatChat\PatChatServer.UI\obj\Debug\PatChatServer.UI.pdb
