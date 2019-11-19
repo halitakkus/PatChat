@@ -11,7 +11,6 @@ namespace PatChat.DataAccessLayer
     {
       public bool AddUser(User user)
         {
-            
             Context.Users.Add(user);
             return Context.SaveChanges() > 0;
         }
@@ -26,15 +25,15 @@ namespace PatChat.DataAccessLayer
         public bool AddMessage(User user, string message,Group group )
         {
             string Id = Partner.CreateId();
-            if (Context.Messages.Any(i => i.Id == Id) == false)
+            if (!Context.Messages.Any(i => i.Id == Id))
             {
-             /*Context.Users.Find(user.Id).addMessage.Add(new Message()
+             Context.Users.Find(user.Id).addMessage.Add(new Message()
                 {
                     Content = message,
-                    Group = group,
+                    GroupId = group.Id,
                     IsDeleted = false,
                     Id = Id
-                });*/
+                });
             }
             else
                 AddMessage(user,message,group);
@@ -47,9 +46,9 @@ namespace PatChat.DataAccessLayer
         {
             return Context.Users.Find(Id);
         }
-        public List<User> Search(string UName,string Name)
+        public List<User> Search(string search)
         {
-            return Context.Users.Where(i => i.Name.Contains(Name) || i.UserName.Contains(UName)).ToList();
+            return Context.Users.Where(i => i.Name.Contains(search) || i.UserName.Contains(search)).ToList();
         }
         public bool Remove(User user)
         {

@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace PatChat.Entities.Entities
 {
-  public  class AddGroup
+   public class AddFriend
     {
+     
         [Key]
-        public string Id { get; set; }
-        public Group Group { get; set; }
-        public string GroupId { get; set; }
-        public User User { get; set; }
-        public string UserId { get; set; }
+      public  string Id { get; set; }
+      public User User { get; set; }
+      public string UserId { get; set; }
     }
 }

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\AddFriend.cs" />
     <Compile Include="Entities\AddGroup.cs" />
     <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\Message.cs" />

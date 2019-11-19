@@ -12,7 +12,10 @@ namespace PatChat.Entities.Entities
         [Key]
         public string Id { get; set; }
         public Message Message { get; set; }
+        public string MessageId { get; set; }
         public User User { get; set; }
+        public string UserId { get; set; }
+
         public bool Func { get; set; }
     }
 }

@@ -41,3 +41,4 @@ C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.csproj.CopyCo
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.exe
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.pdb
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.HomePage.resources
+C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.Create.resources

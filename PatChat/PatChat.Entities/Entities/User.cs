@@ -11,7 +11,9 @@ namespace PatChat.Entities.Entities
     {
         public User()
         {
+            addFriends = new List<AddFriend>();
             addGroups = new List<AddGroup>();
+            addMessage = new List<Message>();
         }
         [Key]
         public string Id { get; set; }
@@ -22,5 +24,6 @@ namespace PatChat.Entities.Entities
         public List<Message> addMessage { get; set; }
 
         public List<AddGroup> addGroups { get; set; }
+        public List<AddFriend> addFriends { get; set; }
     }
 }

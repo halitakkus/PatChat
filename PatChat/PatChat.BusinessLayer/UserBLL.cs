@@ -11,6 +11,7 @@ namespace PatChat.BusinessLayer
     public class UserBLL
     {
         private UserDAL _UserDAL { get; set; }
+       
         public UserBLL() {
             _UserDAL = new UserDAL();
         }
@@ -24,7 +25,10 @@ namespace PatChat.BusinessLayer
                 return null;
             return _UserDAL.IsExistsAndFind(username, password);
         }
-        
+        public List<User> Search(string search)
+        {
+            return _UserDAL.Search(search) ;
+        }
         public bool LoginControl(string username,string password)
         {
             return _UserDAL.IsExists(username,password);
@@ -41,6 +45,11 @@ namespace PatChat.BusinessLayer
              return   _UserDAL.Remove(User);
             }
             return false;
+        }
+
+        public string CreateByStringId()
+        {
+            return Partner.CreateId();
         }
 
         public bool AddUser(User user)

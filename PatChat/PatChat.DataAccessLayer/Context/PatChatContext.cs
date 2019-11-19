@@ -15,5 +15,6 @@ namespace PatChat.DataAccessLayer.Context
         public DbSet<AddGroup> AddGroups { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<MessageFunc> MessageFuncs { get; set; }
+        public DbSet<AddFriend> AddFriends { get; set; }
     }
 }
