@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BaseContext.cs" />
     <Compile Include="Context\PatChatContext.cs" />
+    <Compile Include="FriendDetails.cs" />
     <Compile Include="GroupDAL.cs" />
     <Compile Include="MessageDAL.cs" />
     <Compile Include="Partner.cs" />

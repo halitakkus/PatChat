@@ -14,9 +14,10 @@ namespace PatChatClient.UI
 {
     public partial class Create : Form
     {
-        UserBLL _user = new UserBLL();
+        UserBLL _user;
         public Create()
         {
+            _user = new UserBLL();
             InitializeComponent();
         }
 
@@ -28,14 +29,22 @@ namespace PatChatClient.UI
             UserName = textBox1.Text,
             Name = textBox2.Text,
             Password = textBox3.Text,
-            BirthDate = Convert.ToDateTime(textBox4.Text),
+            BirthDate =Convert.ToDateTime( dateTimePicker1.Text),
             };
             if (_user.AddUser(user))
             {
                 MessageBox.Show("Merhaba "+user.Name + ", kaydınız başarıyla gerçekleşti. Hemen giriş yapıp patchat mesajlaşmaya başlayabilirsiniz.","BAŞARILI!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 this.Hide();
+                return;
             }
+            MessageBox.Show("Lütfen eksik alanları kontrol edin!!");
+        }
+
+        private void Create_Load(object sender, EventArgs e)
+        {
 
         }
+
+      
     }
 }

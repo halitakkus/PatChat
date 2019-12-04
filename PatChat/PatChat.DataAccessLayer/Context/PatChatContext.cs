@@ -10,6 +10,11 @@ namespace PatChat.DataAccessLayer.Context
 {
     public class PatChatContext : DbContext
     {
+        public PatChatContext()
+        {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PatChatContext>());
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<AddGroup> AddGroups { get; set; }

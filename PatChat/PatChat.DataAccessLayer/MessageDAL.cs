@@ -9,10 +9,7 @@ namespace PatChat.DataAccessLayer
 {
    public class MessageDAL : BaseContext
     {
-        void aa()
-        {
-           
-        }
+       
         public Message GetUserById(int Id)
         {
             return Context.Messages.Find(Id);

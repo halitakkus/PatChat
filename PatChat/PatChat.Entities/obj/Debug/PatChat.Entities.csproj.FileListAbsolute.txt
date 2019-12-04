@@ -5,6 +5,6 @@ C:\Users\Halit\Desktop\PatChat\PatChat.Entities\obj\Debug\PatChat.Entities.dll
 C:\Users\Halit\Desktop\PatChat\PatChat.Entities\obj\Debug\PatChat.Entities.pdb
 C:\GIT\PatChat\PatChat\PatChat.Entities\bin\Debug\PatChat.Entities.dll
 C:\GIT\PatChat\PatChat\PatChat.Entities\bin\Debug\PatChat.Entities.pdb
-C:\GIT\PatChat\PatChat\PatChat.Entities\obj\Debug\PatChat.Entities.csprojAssemblyReference.cache
 C:\GIT\PatChat\PatChat\PatChat.Entities\obj\Debug\PatChat.Entities.dll
 C:\GIT\PatChat\PatChat\PatChat.Entities\obj\Debug\PatChat.Entities.pdb
+C:\GIT\PatChat\PatChat\PatChat.Entities\obj\Debug\PatChat.Entities.csprojAssemblyReference.cache

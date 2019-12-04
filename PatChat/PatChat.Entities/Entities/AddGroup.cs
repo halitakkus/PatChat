@@ -11,9 +11,9 @@ namespace PatChat.Entities.Entities
     {
         [Key]
         public string Id { get; set; }
-        public Group Group { get; set; }
+        public virtual Group Group { get; set; }
         public string GroupId { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
         public string UserId { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using PatChat.BusinessLayer;
+using PatChat.Entities;
 using PatChat.Entities.Entities;
 using System;
 using System.Collections.Generic;
@@ -24,8 +25,11 @@ namespace PatChatClient.UI
 
             InitializeComponent();
         }
+      
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer1.Start();
         }
          int Count = 0;
         private void button1_Click(object sender, EventArgs e)
@@ -59,13 +63,11 @@ namespace PatChatClient.UI
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.Green;
             this.Text = ":)";
         }
 
         private void button2_MouseHover(object sender, EventArgs e)
         {
-                label3.ForeColor = Color.Maroon;
             this.Text = ":(";
         }
 
@@ -80,5 +82,7 @@ namespace PatChatClient.UI
             crt.Text = "kayıt ekranı";
             crt.Show();
         }
+
+       
     }
 }

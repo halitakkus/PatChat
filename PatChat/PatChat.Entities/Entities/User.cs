@@ -20,10 +20,10 @@ namespace PatChat.Entities.Entities
         public string UserName { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
+        public bool IsOnline { get; set; }
         public DateTime BirthDate { get; set; }
-        public List<Message> addMessage { get; set; }
-
-        public List<AddGroup> addGroups { get; set; }
-        public List<AddFriend> addFriends { get; set; }
+        public virtual List<Message> addMessage { get; set; }
+        public virtual List<AddGroup> addGroups { get; set; }
+        public virtual List<AddFriend> addFriends { get; set; }
     }
 }

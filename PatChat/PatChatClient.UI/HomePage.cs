@@ -1,4 +1,5 @@
 ﻿using PatChat.BusinessLayer;
+using PatChat.Entities;
 using PatChat.Entities.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,32 +17,84 @@ namespace PatChatClient.UI
     {
         UserBLL _UserManager { get; set; }
 
-        ListBox l1 { get; set; }
+       
         public HomePage()
         {
             _UserManager = new UserBLL();
-            l1 = new ListBox();
             InitializeComponent();
         }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
             groupBox1.Text = "Hoşgeldin " + Session.CurrentUser.Name;
-            l1.Location = new Point(0, 0);
-            l1.Text = "ara";
-            l1.Width = 400;
-            l1.Height = 500;
-            l1.Visible = false;
-            panel1.Controls.Add(l1);
+            listView1.Visible = false;
+
+          
+            foreach (var item in _UserManager.ListFriends())
+            {
+                listBox1.Items.Add("@"+_UserManager.GetUserById(item.FriendId).UserName);
+                listBox1.Tag = item.FriendId;
+            }
+
+            listBox1.DisplayMember = "UserId";
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            l1.Visible = true;
+            listView1.Visible = true;
+            listView1.Items.Clear();
             List<User> user = _UserManager.Search(textBox1.Text);
-            l1.DataSource = user;
-          //   l1.DataBindings.Add("Text", user, "Name");
+            string[] row = new string[2];
+            foreach (var item in user)
+            {
+                row[0] = "@"+item.UserName+" [" + item.Name+"]";
+                row[1] = "+";
+                ListViewItem r = new ListViewItem(row);
+                r.Tag = item.Id;
+                listView1.Items.Add(r);
+                
+            }
+            //   l1.DataBindings.Add("Text", user, "Name");
+        }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DetailsForm.Friend = _UserManager.GetUserById(listView1.SelectedItems[0].Tag.ToString());
+            DetailsForm form = new DetailsForm();
+            form.Text = "detaylar";
+            form.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Session.CurrentUser = null;
+            Form1 Login = new Form1();
+            Login.Show();
+            this.Hide();
+           
+            
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DetailsForm.Friend = _UserManager.GetUserById(listBox1.Tag.ToString());
+            DetailsForm details = new DetailsForm();
+            details.Show();
         }
     }
 }

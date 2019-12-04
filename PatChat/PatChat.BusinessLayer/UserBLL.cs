@@ -25,6 +25,35 @@ namespace PatChat.BusinessLayer
                 return null;
             return _UserDAL.IsExistsAndFind(username, password);
         }
+        public bool RemoveFriend(string FriendId)
+        {
+            if (FriendId is null)
+                return false;
+            return _UserDAL.RemoveFriend(FriendId);
+        }
+        public List<AddFriend> ListFriends()
+        {
+            return _UserDAL.ListFriends();
+        }
+        public List<AddFriend> ListFriends(string FriendId)
+        {
+            return _UserDAL.ListFriends(FriendId);
+        }
+        public bool AddFriend(string FriendId)
+        {
+            if (FriendId is null)
+                return false;
+            return _UserDAL.AddFriend(FriendId);
+        }
+
+        public bool IsExistsFriend(string FriendId, string UserId)
+        {
+            if (FriendId == UserId)
+                return true;
+            if (_UserDAL.IsExistsFriend(FriendId,UserId))
+                return true;
+            return false;
+        }
         public List<User> Search(string search)
         {
             return _UserDAL.Search(search) ;
@@ -54,18 +83,20 @@ namespace PatChat.BusinessLayer
 
         public bool AddUser(User user)
         {
-            if (user == null)
+            if (user == null||user.Name==""||user.Password=="")
                 return false;
 
           return  _UserDAL.AddUser(user);
         }
 
-        public bool AddMessage(User user,string message,Group group)
+        public Message AddMessage(User user,string message,Group group)
         {
-            if (user == null||message ==null)
-                return false;
+            if (message is null)
+                return null;
 
-            return _UserDAL.AddMessage(user,message,group);
+            return _UserDAL.AddMessage(message,group);
         }
+
+       
     }
 }

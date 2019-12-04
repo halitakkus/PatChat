@@ -10,6 +10,9 @@ namespace PatChatServer.UI
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Sunucu başlatıldı!!");
+            Console.ReadLine();
+
         }
     }
 }

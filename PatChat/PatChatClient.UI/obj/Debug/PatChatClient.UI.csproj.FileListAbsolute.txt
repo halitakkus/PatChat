@@ -34,11 +34,14 @@ C:\GIT\PatChat\PatChat\PatChatClient.UI\bin\Debug\EntityFramework.SqlServer.xml
 C:\GIT\PatChat\PatChat\PatChatClient.UI\bin\Debug\PatChat.DataAccessLayer.pdb
 C:\GIT\PatChat\PatChat\PatChatClient.UI\bin\Debug\PatChat.DataAccessLayer.dll.config
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.csprojAssemblyReference.cache
+C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.Create.resources
+C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.DetailsForm.resources
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.Form1.resources
+C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.HomePage.resources
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.Properties.Resources.resources
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.csproj.GenerateResource.cache
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.csproj.CopyComplete
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.exe
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.pdb
-C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.HomePage.resources
-C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.Create.resources
+C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.FriendList.resources
+C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.Chat.resources
