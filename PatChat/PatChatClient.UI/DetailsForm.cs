@@ -57,7 +57,7 @@ namespace PatChatClient.UI
         {
             FriendList.Friend = _user.GetUserById(Friend.Id);
             FriendList friends = new FriendList();
-            friends.Show();
+            friends.ShowDialog();
             this.Hide();
         }
 
@@ -65,7 +65,7 @@ namespace PatChatClient.UI
         {
             Chat chat = new Chat();
             Chat.Friend = _user.GetUserById(Friend.Id);
-            chat.Show();
+            chat.ShowDialog();
             this.Hide();
         }
     }

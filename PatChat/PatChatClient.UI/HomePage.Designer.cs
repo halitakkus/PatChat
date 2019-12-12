@@ -109,6 +109,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader4});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(376, 606);
@@ -121,11 +122,12 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Kullanıcı";
-            this.columnHeader1.Width = 106;
+            this.columnHeader1.Width = 148;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Ekle";
+            this.columnHeader4.Width = 86;
             // 
             // HomePage
             // 

@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,20 +24,22 @@ namespace PatChatClient.UI
             _UserManager = new UserBLL();
             InitializeComponent();
         }
-
-        private void HomePage_Load(object sender, EventArgs e)
+        void Loading()
         {
             groupBox1.Text = "Hoşgeldin " + Session.CurrentUser.Name;
             listView1.Visible = false;
 
-          
             foreach (var item in _UserManager.ListFriends())
             {
-                listBox1.Items.Add("@"+_UserManager.GetUserById(item.FriendId).UserName);
+                listBox1.Items.Add("@" + _UserManager.GetUserById(item.FriendId).UserName);
                 listBox1.Tag = item.FriendId;
             }
 
             listBox1.DisplayMember = "UserId";
+        }
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            new Thread(new ThreadStart(Loading)).Start();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -67,7 +70,7 @@ namespace PatChatClient.UI
             DetailsForm.Friend = _UserManager.GetUserById(listView1.SelectedItems[0].Tag.ToString());
             DetailsForm form = new DetailsForm();
             form.Text = "detaylar";
-            form.Show();
+            form.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -81,8 +84,6 @@ namespace PatChatClient.UI
             Form1 Login = new Form1();
             Login.Show();
             this.Hide();
-           
-            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace PatChat.DataAccessLayer
             {
                 //Single or Multi add
                 FriendDetails AddFriend = new FriendDetails(new SingleFriend());
-                return AddFriend.Result(FriendId,Id);
+                return AddFriend.Result(FriendId, Id);
             }
             else
                 AddFriend(FriendId);

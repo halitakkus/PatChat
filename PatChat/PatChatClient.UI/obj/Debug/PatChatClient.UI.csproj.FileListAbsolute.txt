@@ -45,3 +45,6 @@ C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.exe
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.pdb
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.FriendList.resources
 C:\GIT\PatChat\PatChat\PatChatClient.UI\obj\Debug\PatChatClient.UI.Chat.resources
+C:\GIT\PatChat\PatChat\PatChatClient.UI\bin\Debug\Newtonsoft.Json.dll
+C:\GIT\PatChat\PatChat\PatChatClient.UI\bin\Debug\Newtonsoft.Json.xml
+C:\GIT\PatChat\PatChat\PatChatClient.UI\bin\Debug\System.Reflection.TypeExtensions.dll
