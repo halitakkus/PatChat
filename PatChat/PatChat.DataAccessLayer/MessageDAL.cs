@@ -13,7 +13,7 @@ namespace PatChat.DataAccessLayer
         {
             return Context.Messages.Where(i=>i.GroupId== groupId).ToList();
         }
-        public Message GetUserById(int Id)
+        public Message GetUserById(string Id)
         {
             return Context.Messages.Find(Id);
         }
@@ -24,6 +24,21 @@ namespace PatChat.DataAccessLayer
         public bool Remove(Message message)
         {
             Context.Messages.Remove(message);
+            return Context.SaveChanges() > 0;
+        }
+
+        public bool LikesMessage(string MessageId,string UserId,bool stat)
+        {
+            if (Context.MessageFuncs.Any(i => i.UserId == UserId && i.MessageId == MessageId) == false)
+                Context.MessageFuncs.Add(new MessageFunc()
+                {
+                    Id = Partner.CreateId(),
+                    Func = stat,
+                    MessageId = MessageId,
+                    UserId = UserId
+                });
+            else
+                Context.MessageFuncs.Where(i => i.UserId == UserId && i.MessageId == MessageId).FirstOrDefault().Func = stat;
             return Context.SaveChanges() > 0;
         }
 

@@ -23,9 +23,10 @@ namespace PatChatClient.UI
         {
             _UserManager = new UserBLL();
             InitializeComponent();
-        }
+        } 
         void Loading()
         {
+            _UserManager.SetOnline(Session.CurrentUser.Id);
             groupBox1.Text = "Hoşgeldin " + Session.CurrentUser.Name;
             listView1.Visible = false;
 
@@ -60,10 +61,7 @@ namespace PatChatClient.UI
             //   l1.DataBindings.Add("Text", user, "Name");
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -73,29 +71,46 @@ namespace PatChatClient.UI
             form.ShowDialog();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void button1_Click(object sender, EventArgs e)
         {
+            _UserManager.SetOfline(Session.CurrentUser.Id);
             Session.CurrentUser = null;
             Form1 Login = new Form1();
             Login.Show();
             this.Hide();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             DetailsForm.Friend = _UserManager.GetUserById(listBox1.Tag.ToString());
             DetailsForm details = new DetailsForm();
             details.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox1.Visible = true;
+            listBox2.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GroupBLL group = new GroupBLL();
+          listBox2.DataSource =    group.GroupList2(Session.CurrentUser.Id);
+            listBox2.DisplayMember = "GroupId";
+            listBox1.Visible = false;
+            listBox2.Visible = true;
+        }
+
+        private void listBox2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Chat ch = new Chat();
+            Chat.groupname = ((AddGroup)listBox2.SelectedItem).Group.Name;
+            ch.Show();
         }
     }
 }

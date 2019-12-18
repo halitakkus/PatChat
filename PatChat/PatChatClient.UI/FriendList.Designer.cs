@@ -35,11 +35,12 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.Name});
             this.listView1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.listView1.ForeColor = System.Drawing.Color.Black;
             this.listView1.Location = new System.Drawing.Point(4, 3);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(257, 612);
@@ -63,7 +64,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(262, 618);
             this.Controls.Add(this.listView1);
-           
+
             this.Text = "Arkadaş listesi";
             this.Load += new System.EventHandler(this.FriendList_Load);
             this.ResumeLayout(false);

@@ -19,23 +19,31 @@ namespace PatChat.DataAccessLayer
         }
         public bool CreateGroup(string GroupName,string[] UserId)
         {
-            Context.Groups.Add(new Group
+            if (Context.Groups.Any(i => i.Name == GroupName) == false)
             {
-                Id = Partner.CreateId(),
-                Name = GroupName
-            });
-            if (Context.SaveChanges()>0)
+                Context.Groups.Add(new Group
+                {
+                    Id = Partner.CreateId(),
+                    Name = GroupName
+                });
+                Context.SaveChanges();
+            }
+           
                 if (!AddGroup(UserId, GroupName))
                     return false;
           
-            return Context.SaveChanges()>0;
+            return true;
         }
         public List<AddGroup> GroupList(string GroupName)
         {
             string GroupId = GetGroupByName(GroupName);
             return Context.AddGroups.Where(i => i.GroupId == GroupId).ToList();
         }
-
+        public List<AddGroup> GroupList2(string UserId)
+        {
+            
+            return Context.AddGroups.Where(i => i.UserId == UserId).ToList();
+        }
         public bool AddGroup(string[] UserId,string GroupName)
         {
             string GroupId = GetGroupByName(GroupName);
@@ -48,12 +56,16 @@ namespace PatChat.DataAccessLayer
                     UserId = item
                 });
             }
-            return true;
+            return Context.SaveChanges()>0;
         }
 
         public bool IsExistsGroup(string GroupName)
         {
             return Context.Groups.Any(i => i.Name==GroupName);
+        }
+        public bool IsExistsUserGroup(string GroupId, string UserName)
+        {
+            return Context.AddGroups.Any(i => i.UserId == UserName && i.GroupId== GroupId);
         }
         public Group GetByGroupName(string GroupName)
         {

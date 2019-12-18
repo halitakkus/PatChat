@@ -1,0 +1,5 @@
+C:\GIT\PatChat\PatChat\PatChat.UIObject\bin\Debug\PatChat.UIObject.dll
+C:\GIT\PatChat\PatChat\PatChat.UIObject\bin\Debug\PatChat.UIObject.pdb
+C:\GIT\PatChat\PatChat\PatChat.UIObject\obj\Debug\PatChat.UIObject.csprojAssemblyReference.cache
+C:\GIT\PatChat\PatChat\PatChat.UIObject\obj\Debug\PatChat.UIObject.dll
+C:\GIT\PatChat\PatChat\PatChat.UIObject\obj\Debug\PatChat.UIObject.pdb

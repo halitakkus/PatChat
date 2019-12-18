@@ -17,5 +17,6 @@ namespace PatChat.Entities.Entities
         public string UserId { get; set; }
         public string Content { get; set; }
         public bool IsDeleted { get; set; }
+        public virtual List<MessageFunc> MessageFuncs { get; set; }
     }
 }

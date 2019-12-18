@@ -23,6 +23,10 @@ namespace PatChat.BusinessLayer
         {
             return _Group.IsExistsGroup(GroupName);
         }
+        public bool IsExistsUserGroup(string GroupId, string UserName)
+        {
+            return _Group.IsExistsUserGroup(GroupId, UserName);
+        }
         public bool CreateGroup(string GroupName,string[] UserId)
         {
             return _Group.CreateGroup(GroupName,UserId);
@@ -36,6 +40,9 @@ namespace PatChat.BusinessLayer
         {
             return    _Group.GroupList(GroupName).ToList();
         }
-
+        public List<AddGroup> GroupList2(string UserId)
+        {
+            return _Group.GroupList2(UserId).ToList();
+        }
     }
 }

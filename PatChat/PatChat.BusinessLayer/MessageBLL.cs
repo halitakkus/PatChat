@@ -17,7 +17,10 @@ namespace PatChat.BusinessLayer
             groupDAL = new GroupDAL();
             _message = new MessageDAL();
         }
-
+        public Message GetUserById(string Id)
+        {
+            return _message.GetUserById(Id);
+        }
         public List<Message> ListMessage(string groupname)
         {
             var group = groupDAL.GetByGroupName(groupname);
@@ -25,6 +28,12 @@ namespace PatChat.BusinessLayer
                 return null;
 
             return _message.ListMessage(group.Id);
+        }
+
+
+        public bool LikesMessage(string MessageId, string UserId, bool stat)
+        {
+            return _message.LikesMessage( MessageId,  UserId,  stat);
         }
     }
 }

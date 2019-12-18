@@ -19,6 +19,14 @@ namespace PatChat.BusinessLayer
         {
             return _UserDAL.GetUserById(Id) != null;
         }
+        public void SetOnline(string UserId)
+        {
+            _UserDAL.SetOnline(UserId);
+        }
+        public void SetOfline(string UserId)
+        {
+            _UserDAL.SetOfline(UserId);
+        }
         public User IsExistsAndFind(string username,string password)
         {
             if (username == null || password == null)
@@ -89,12 +97,12 @@ namespace PatChat.BusinessLayer
           return  _UserDAL.AddUser(user);
         }
 
-        public Message AddMessage(User user,string message,Group group)
+        public Message AddMessage(User user,string message,Group group, string Id)
         {
             if (message is null)
                 return null;
 
-            return _UserDAL.AddMessage(message,group);
+            return _UserDAL.AddMessage(message,group,  Id);
         }
 
        

@@ -19,6 +19,17 @@ namespace PatChat.DataAccessLayer
         {
             return Context.Users.Any(i => i.UserName == username && i.Password == password);
         }
+
+        public void SetOnline(string UserId)
+        {
+            Context.Users.Find(UserId).IsOnline = true;
+            Context.SaveChanges();
+        }
+        public void SetOfline(string UserId)
+        {
+            Context.Users.Find(UserId).IsOnline = false;
+            Context.SaveChanges();
+        }
         public User IsExistsAndFind(string username, string password)
         {
             return Context.Users.Where(i => i.UserName == username && i.Password == password).FirstOrDefault();
@@ -40,7 +51,7 @@ namespace PatChat.DataAccessLayer
             if (!Context.AddFriends.Any(i => i.Id == Id))
             {
                 //Single or Multi add
-                FriendDetails AddFriend = new FriendDetails(new SingleFriend());
+                FriendDetails AddFriend = new FriendDetails(new MultiFriend());
                 return AddFriend.Result(FriendId, Id);
             }
             else
@@ -66,9 +77,9 @@ namespace PatChat.DataAccessLayer
                 return true;
             return false;
         }
-        public Message AddMessage( string message,Group group )
+        public Message AddMessage( string message,Group group ,string Id)
         {
-            string Id = Partner.CreateId();
+            
             if (!Context.Messages.Any(i => i.Id == Id))
             {
              Context.Users.Find(Session.CurrentUser.Id).addMessage.Add(new Message()
@@ -80,7 +91,7 @@ namespace PatChat.DataAccessLayer
                 });
             }
             else
-                AddMessage(message,group);
+                AddMessage(message,group,Id);
 
             if (Context.SaveChanges() > 0)
             {
