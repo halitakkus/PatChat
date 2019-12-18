@@ -32,7 +32,7 @@ namespace PatChatClient.UI
 
             foreach (var item in _UserManager.ListFriends())
             {
-                listBox1.Items.Add("@" + _UserManager.GetUserById(item.FriendId).UserName);
+                listBox1.Items.Add("@" + _UserManager.GetUserById(item.FriendId).UserName + "✓");
                 listBox1.Tag = item.FriendId;
             }
 
@@ -43,7 +43,7 @@ namespace PatChatClient.UI
             new Thread(new ThreadStart(Loading)).Start();
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        void search()
         {
             listView1.Visible = true;
             listView1.Items.Clear();
@@ -51,13 +51,17 @@ namespace PatChatClient.UI
             string[] row = new string[2];
             foreach (var item in user)
             {
-                row[0] = "@"+item.UserName+" [" + item.Name+"]";
+                row[0] = "@" + item.UserName + " [" + item.Name + "]";
                 row[1] = "+";
                 ListViewItem r = new ListViewItem(row);
                 r.Tag = item.Id;
                 listView1.Items.Add(r);
-                
+
             }
+        }
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            search();
             //   l1.DataBindings.Add("Text", user, "Name");
         }
 
@@ -105,12 +109,15 @@ namespace PatChatClient.UI
             listBox1.Visible = false;
             listBox2.Visible = true;
         }
-
         private void listBox2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Chat ch = new Chat();
             Chat.groupname = ((AddGroup)listBox2.SelectedItem).Group.Name;
             ch.Show();
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            search();
         }
     }
 }

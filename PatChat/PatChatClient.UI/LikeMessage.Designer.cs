@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LikeMessage));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,6 +40,7 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -52,50 +55,55 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button1.Location = new System.Drawing.Point(3, 71);
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.ImageKey = "like-256.png";
+            this.button1.ImageList = this.imageList1;
+            this.button1.Location = new System.Drawing.Point(12, 63);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 23);
+            this.button1.Size = new System.Drawing.Size(54, 42);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Beğen=>";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button2.Location = new System.Drawing.Point(170, 71);
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.ImageKey = "thumbs-k-down-256.png";
+            this.button2.ImageList = this.imageList1;
+            this.button2.Location = new System.Drawing.Point(206, 59);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(46, 46);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Beğenme=>";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(76, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(258, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "label3";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(12, 129);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(281, 23);
+            this.button3.Size = new System.Drawing.Size(291, 23);
             this.button3.TabIndex = 5;
             this.button3.Text = "Liste";
             this.button3.UseVisualStyleBackColor = false;
@@ -135,11 +143,34 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Beğenmeyenler";
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "21-user_-_single-256.png");
+            this.imageList1.Images.SetKeyName(1, "0042_088_delete_close_cross-512.png");
+            this.imageList1.Images.SetKeyName(2, "Add-Users-512.png");
+            this.imageList1.Images.SetKeyName(3, "Basic-iconfinder-94-128.png");
+            this.imageList1.Images.SetKeyName(4, "boy-128.png");
+            this.imageList1.Images.SetKeyName(5, "disk_B-512.png");
+            this.imageList1.Images.SetKeyName(6, "envelope-512.png");
+            this.imageList1.Images.SetKeyName(7, "file_document-34-256.png");
+            this.imageList1.Images.SetKeyName(8, "internet-group-chat-512.png");
+            this.imageList1.Images.SetKeyName(9, "like-256.png");
+            this.imageList1.Images.SetKeyName(10, "lock-256.png");
+            this.imageList1.Images.SetKeyName(11, "Login_mobile_mobile_account_mobile_login_user_account_ico-256.png");
+            this.imageList1.Images.SetKeyName(12, "login-512.png");
+            this.imageList1.Images.SetKeyName(13, "magnifyingglass-256.png");
+            this.imageList1.Images.SetKeyName(14, "seo_additional-01-128.png");
+            this.imageList1.Images.SetKeyName(15, "social_connection-people-friends-meet-groups-256.png");
+            this.imageList1.Images.SetKeyName(16, "thumbs-k-down-256.png");
+            this.imageList1.Images.SetKeyName(17, "users2-2-256.png");
+            // 
             // LikeMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 160);
+            this.ClientSize = new System.Drawing.Size(307, 160);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listBox2);
@@ -170,5 +201,6 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

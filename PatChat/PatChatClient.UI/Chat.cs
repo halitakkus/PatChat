@@ -109,6 +109,8 @@ namespace PatChatClient.UI
                         {
                             listBox1.Items.Add(mess2.Id + "/" + _UserManager.GetUserById(mess2.UserId).Name + ":" + mess2.Content);
                         }
+                       
+                        
 
 
 
@@ -121,7 +123,7 @@ namespace PatChatClient.UI
         void Connect()
         {
             readData = "OK";
-            clientSocket.Connect("127.0.0.1", 8888);
+            clientSocket.Connect("192.168.1.101", 8888);
             serverStream = clientSocket.GetStream();
             msg();
             string data = "";

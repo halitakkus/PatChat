@@ -65,8 +65,22 @@ namespace PatChatClient.UI
         {
             Chat chat = new Chat();
             Chat.Friend = _user.GetUserById(Friend.Id);
-            chat.Show();
-            this.Hide();
+            if (!_user.IsExistsFriend(Friend.Id, Session.CurrentUser.Id))
+            {
+                DialogResult d = MessageBox.Show("Bu kişi arkadaşınız değil! \n \n Yinede konuşma başlatmak istiyorsanız onaylayın.", "Uyarı!!", MessageBoxButtons.OKCancel);
+                if (d == DialogResult.OK)
+                {
+                    chat.Show();
+                    this.Hide();
+                }
+
+
+            }
+            else
+            {
+                chat.Show();
+                this.Hide();
+            }
         }
     }
 }
