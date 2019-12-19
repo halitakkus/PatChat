@@ -123,7 +123,7 @@ namespace PatChatClient.UI
         void Connect()
         {
             readData = "OK";
-            clientSocket.Connect("192.168.1.101", 8888);
+            clientSocket.Connect("127.0.0.1", 8888);
             serverStream = clientSocket.GetStream();
             msg();
             string data = "";

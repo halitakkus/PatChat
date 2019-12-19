@@ -122,6 +122,7 @@ namespace PatChatServer.UI
                     broadcastStream.Write(broadcastBytes, 0, broadcastBytes.Length);
 
                         broadcastStream.Flush();
+                // 
                    
               
                
@@ -129,9 +130,9 @@ namespace PatChatServer.UI
 
             }
 
-        }  //end broadcast function
+        }  
 
-    }//end Main class
+    }
     public class handleClinet
     {
         TcpClient clientSocket;
@@ -195,9 +196,9 @@ namespace PatChatServer.UI
 
               
 
-            }//end while
+            }
 
-        }//end doChat
+        }
 
     }
 }
