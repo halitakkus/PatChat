@@ -45,7 +45,7 @@ namespace PatChat.Entities
             return new LinkedListEnumerator(First);
         }
         public class LinkedListEnumerator : IEnumerator
-        {
+         {
             MessageNode head;
             MessageNode Move;
             public LinkedListEnumerator(MessageNode first)

@@ -15,13 +15,10 @@ namespace PatChat.DataAccessLayer
         {
             _method = method;
         }
-
         public bool Result(string FriendId,string Id)
         {
             return _method.Status(FriendId,Id);
         }
-
-
     }
 
     public interface IFriendMethod
